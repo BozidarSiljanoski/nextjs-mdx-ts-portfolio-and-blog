@@ -1,8 +1,19 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
+import Head from 'next/head'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return <>
+    <Head>
+      <title>BS Portfolio and Blog</title>
+    </Head>
+    <div className="container">
+      <main>
+      <Component {...pageProps} />
+      </main>
+    </div>
+
+  </>
 }
 
 export default MyApp
